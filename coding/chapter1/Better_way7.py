@@ -41,7 +41,7 @@ for i, flavor in enumerate(flavor_list):
 # 3: 피칸
 # 4: 딸기
 
-for i, flavor in enumerate(flavor_list, 1):
+for i, flavor in enumerate(flavor _list, 1):
     print(f'{i}: {flavor}')
 # 1: 바닐라
 # 2: 초콜릿
