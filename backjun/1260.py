@@ -35,6 +35,5 @@ def bfs(V):
                 q.append(i)
                 visited[i] = 1
 
-dfs(V)
-print()
+dfs(V, end=' ')
 bfs(V)
