@@ -1,4 +1,3 @@
-
 def get_stats(numbers):
     minimum = min(numbers)
     maximum = max(numbers)
@@ -33,8 +32,6 @@ longest, *middle, shortest = get_avg_ratio(lengths)
 
 print(f'최대 길이: {longest:>4.0%}')        # 최대 길이: 108%
 print(f'최소 길이: {shortest:>4.0%}')       # 최소 길이:  89%
-
-
 
 
 def get_stats(numbers):
