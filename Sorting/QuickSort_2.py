@@ -1,20 +1,24 @@
+# Quick Sort
+# 확인용 코드 전부 주석 처리
+
 def partition(array, low, high):
     pivot = array[high]
-    print('pivot', pivot)
+    # print('pivot', pivot)
     i = low - 1
-    print('i', i) # i = -1, 0, 1, 2, ...
+    # print('i', i) # i = -1, 0, 1, 2, ...
     
-    for j in range(low, high):
+    for j in range(low, high): # j = 0, ..., 5 
         if array[j] <= pivot:
-            print('array[j]', array[j])
+            # print('array[j]', array[j])
             i = i + 1
-            print('Before swapping: array[i]:', array[i], 'array[j]:', array[j])
+            # print('Before swapping: array[i]:', array[i], 'array[j]:', array[j])
             (array[i], array[j]) = (array[j], array[i])
-            print('After swapping: array[i]:', array[i], 'array[j]:', array[j])
+            # print('After swapping: array[i]:', array[i], 'array[j]:', array[j])
     
-    print('array[i+1]', array[i+1], 'array[high]', array[high])
+    # print('before array', array)
+    # print('array[i+1]', array[i+1], 'array[high]', array[high])
     (array[i+1], array[high]) = (array[high], array[i+1])
-    print('array', array)
+    # print('array', array)
     
     return i + 1
 
@@ -24,7 +28,7 @@ def quickSort(array, low, high):
         # element smaller than pivot are on the left
         # element greater than pivot are on the right
         pi = partition(array, low, high)
-        print('pi', pi)
+        # print('pi', pi)
         
         quickSort(array, low, pi - 1)
         quickSort(array, pi + 1, high)
@@ -35,37 +39,3 @@ size = len(data)
 
 quickSort(data, 0, size - 1)
 print('after sorting', data)
-
-# origin data [1, 7, 4, 1, 10, 9, -2]
-# pivot -2
-# i -1
-# array[i+1] 1 array[high] -2
-# array [-2, 7, 4, 1, 10, 9, 1]
-# pi 0
-# pivot 1
-# i 0
-# array[j] 1
-# Before swapping: array[i]: 7 array[j]: 1
-# After swapping: array[i]: 1 array[j]: 7
-# array[i+1] 4 array[high] 1
-# array [-2, 1, 1, 7, 10, 9, 4]
-# pi 2
-# pivot 4
-# i 2
-# array[i+1] 7 array[high] 4
-# array [-2, 1, 1, 4, 10, 9, 7]
-# pi 3
-# pivot 7
-# i 3
-# array[i+1] 10 array[high] 7
-# array [-2, 1, 1, 4, 7, 9, 10]
-# pi 4
-# pivot 10
-# i 4
-# array[j] 9
-# Before swapping: array[i]: 9 array[j]: 9
-# After swapping: array[i]: 9 array[j]: 9
-# array[i+1] 10 array[high] 10
-# array [-2, 1, 1, 4, 7, 9, 10]
-# pi 6
-# after sorting [-2, 1, 1, 4, 7, 9, 10]
