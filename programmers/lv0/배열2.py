@@ -14,3 +14,8 @@ def solution(angle):
     else:
         answer = 1
     return answer
+
+# 배열의 평균값
+def solution(numbers):
+    answer = sum(numbers) / len(numbers)
+    return answer
