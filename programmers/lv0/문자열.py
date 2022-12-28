@@ -27,3 +27,34 @@ def solution(my_string, n):
 
 my_string = "dahun"
 print(solution(my_string, 3))
+
+# 특정 문자 제거하기
+# 1
+def solution(my_string, letter):
+    answer = my_string.replace(letter, '')
+    return answer
+
+# 2
+def solution(my_string, letter):
+    answer = ''
+    for string in my_string:
+        if string != letter:
+            asnwer += string
+    return answer
+
+# 3
+def solution(my_string, letter):
+    return ''.join([c for c in my_string if c != letter])
+
+
+# 문자열 안에 문자열
+# 1
+def solution(str1, str2):
+    if str2 in str1:
+        return 1
+    else:
+        return 2
+    
+# 2
+def solution(str1, str2):
+    return 1 if str2 in str1 else 2
