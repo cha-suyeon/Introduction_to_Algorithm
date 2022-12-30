@@ -30,7 +30,3 @@ def solution(array):
 arr4 = [4, 4, 4, 3, 2, 2]
 print('set', set(arr4))
 print(solution(arr4))
-
-
-
-# 3
